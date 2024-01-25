@@ -1,7 +1,7 @@
 import React from "react";
 import InputType from "./InputType";
 
-function Square({ moveInputValue, setNextInput } : { moveInputValue: InputType, setNextInput: React.Dispatch<React.SetStateAction<InputType>> }) {
+function Square({ squareNum,  moveInputValue, setNextInput } : { squareNum: number, moveInputValue: InputType, setNextInput: React.Dispatch<React.SetStateAction<InputType>> }) {
     const [curValue, setCurValue] = React.useState(InputType.Empty);
 
     function onTap() {
@@ -14,6 +14,9 @@ function Square({ moveInputValue, setNextInput } : { moveInputValue: InputType, 
         setCurValue(moveInputValue);
         setNextInput(nextInput);
     }
+
+
+    console.log(`Move played on square ${squareNum}!`);
     
 
     return <button className="square" onClick={onTap}>{curValue}</button>

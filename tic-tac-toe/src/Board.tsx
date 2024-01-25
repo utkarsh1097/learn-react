@@ -11,10 +11,13 @@ function Board() {
     for(let i = 0; i < 3; i++) {
         const rowSquares : Array<JSX.Element> = [];
         for(let j = 0; j < 3; j++) {
-            rowSquares.push(<Square moveInputValue={nextInput} setNextInput={setNextInput} key={`square-${3*i+j}}`}/>);
+            const squareNum = 3*i+j;
+            rowSquares.push(<Square squareNum={squareNum} moveInputValue={nextInput} setNextInput={setNextInput} key={`square-${3*i+j}}`}/>);
         }
         boardSquares.push(<div key={`row-${i}`}>{rowSquares}</div>);
     }
+
+    console.log("Move played on board!");
 
     // JSX.Element[] -> JSX.Element. Empty tags ok for the conversion
     return (
