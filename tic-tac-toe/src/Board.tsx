@@ -12,7 +12,11 @@ function Board() {
     }
 
     // JSX.Element[] -> JSX.Element. Empty tags ok for the conversion
-    return <>{boardSquares}</>;
+    return (
+        <div className="board">
+            {boardSquares}
+        </div>
+    );
 }
 
 export default Board;
