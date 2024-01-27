@@ -7,7 +7,9 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+console.log("Pushing to root!");
 root.render(
+  // https://stackoverflow.com/questions/61521734/why-does-my-create-react-app-console-log-twice
   <React.StrictMode>
     <App />
   </React.StrictMode>
