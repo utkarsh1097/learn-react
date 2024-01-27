@@ -2,6 +2,10 @@
 
 - `Create React App` uses `html-webpack-plugin` to generate the "webpack" for this application. Source: [LogRocket](https://blog.logrocket.com/getting-started-with-create-react-app)
   - ["Webpack"](https://webpack.js.org/concepts/) is used to bundle all the JS files used in the webapp into a single source for network optimization, and can also aid development (tree shaking, process TS/SCSS sources, hot reloading etc.)
+- Broadly speaking, a `component` can be written in 2 distinct ways:
+  - Class-based approach. This component can be stateless or stateful.
+  - Functional approach. These components used to be stateless, but with the release of [`Hooks`](https://legacy.reactjs.org/docs/hooks-intro.html) in version 16.8, it is possible to assign & manage the state of a functional component.
+  Read more about it here: [React Hooks and the component lifecycle](https://retool.com/blog/the-react-lifecycle-methods-and-hooks-explained#react-hooks-and-the-component-lifecycle)
 
 -----
 
